@@ -1,5 +1,5 @@
 #include "list_parent.h"
-
+using namespace std;
 
 void createList(List_parent &L)
 {
@@ -26,7 +26,10 @@ void insertFirst(List_parent &L, address_parent P)
 }
 void insertAfter(List_parent &L, address_parent Prec, address_parent P)
 {
-
+    prev(next(Prec)) = P;
+    next(P) = next(Prec);
+    next(Prec) = P;
+    prev(P) = Prec;
 }
 void insertLast(List_parent &L, address_parent P)
 {
@@ -34,7 +37,17 @@ void insertLast(List_parent &L, address_parent P)
 }
 void deleteFirst(List_parent &L, address_parent &P)
 {
-
+    P = first(L);
+    if (next(P) == first(L))
+    {
+        first(L) = NULL;
+    }
+    else
+    {
+      next(prev(first(L))) = next(P) ;
+      first(L) = next(P) ;
+      next(prev(first(L))) = first(L);
+    }
 }
 void deleteLast(List_parent &L, address_parent &P)
 {

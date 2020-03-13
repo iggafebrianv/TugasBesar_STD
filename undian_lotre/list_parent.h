@@ -29,12 +29,13 @@ struct List
 };
 
 void createList(List_parent &L);
-void allocate_parent()
+address_parent allocate_parent(infotype X);
 void insertFirst(List_parent &L, address_parent P);
 void insertAfter(List_parent &L, address_parent Prec, address_parent P);
 void insertLast(List_parent &L, address_parent P);
 void deleteFirst(List_parent &L, address_parent &P);
 void deleteLast(List_parent &L, address_parent &P);
 void deleteAfter(List_parent &L, address_parent Prec, address_parent &P);
+address_parent findElm(List L, infotype X);
 
 #endif // LIST_PARENT_H_INCLUDED
