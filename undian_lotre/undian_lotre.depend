@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1584080513 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.cpp
+	"list_child.h"
+
+1585235647 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.h
+	<iostream>
+
+1585133292 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
+	<iostream>
+	"list_parent.h"
+	"list_child.h"
+
+1585211285 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.h
+	"list_child.h"
+	<iostream>
+

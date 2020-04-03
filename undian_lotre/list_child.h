@@ -8,29 +8,33 @@ using namespace std;
 #define last(L) L.last
 #define info(P) P->info
 
-typedef struct elmlist_child*address_child
+typedef struct elmlist_child*address_child;
+typedef int infotype_child;
 
 struct elmlist_child{
-	infotype info;
-	address next;
-}
+	infotype_child info;
+	address_child next;
+};
 
-struct list_child{
+struct List_child{
 	address_child first;
 	address_child last;
-}
+};
 
-void createList(List &L);
+void createList(List_child &L);
+void insertFirst(List_child &L, address_child P);
+void insertAfter(List_child &L, address_child P, address_child Prec);
+void insertLast(List_child &L, address_child P);
 
-void insertFirst(List &L, address P);
-void insertAfter(List &L, address P, address Prec);
-void insertLast(List &L, address P);
-
-void deleteFirst(List &L,address P);
-void deleteAfter(List &L,address P, address Prec);
-void deleteLast(List &L,address P);
+void deleteFirst(List_child &L,address_child P);
+void deleteAfter(List_child &L,address_child P, address_child Prec);
+void deleteLast(List_child &L,address_child P);
 
 void dealokasi(address_child &P);
 address_child alokasi(infotype_child x);
-address_child searchNumber(list_child L &L,infotype);
-void printInfo(List_child L);
+address_child searchNumber(List_child &L,infotype_child X);
+void printInfo(List_child L);//
+
+
+
+#endif // LIST_CHILD_H_INCLUDED
