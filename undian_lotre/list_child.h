@@ -30,8 +30,8 @@ void deleteFirst(List_child &L,address_child P);
 void deleteAfter(List_child &L,address_child P, address_child Prec);
 void deleteLast(List_child &L,address_child P);
 
-void dealokasi(address_child &P);
-address_child alokasi(infotype_child x);
+void deallocate(address_child &P);
+address_child allocate(infotype_child X);
 address_child searchNumber(List_child &L,infotype_child X);
 void printInfo(List_child L);//
 
