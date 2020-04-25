@@ -3,16 +3,23 @@
 #include "list_child.h"
 #include <iostream>
 using namespace std;
-
+/** Nama : Igga Febrian Virgiani
+    NIM  : 1301194283
+**/
 #define first(L) L.first
 #define next(P) P->next
 #define prev(P) P->prev
 #define info(P) P->info
 #define child(P) P->child
-typedef string infotype_parent;
-typedef struct elmlist_parent *address_parent;
 
-struct elmlist_parent
+typedef struct elm_parent *address_parent;
+
+struct infotype_parent{
+    string nama;
+    string id;
+    int kontak;
+};
+struct elm_parent
 {
     infotype_parent info;
     address_parent next;
@@ -33,7 +40,7 @@ void insertLast(List_parent &L, address_parent P);
 void deleteFirst(List_parent &L, address_parent &P);
 void deleteLast(List_parent &L, address_parent &P);
 void deleteAfter(List_parent &L, address_parent Prec, address_parent &P);
-address_parent findElm( List_parent, infotype_parent X);
+address_parent findElm( List_parent L, string X);
 void printInfo(List_parent L);
-
+address_parent searchByID_p(List_parent L, string x );
 #endif // LIST_PARENT_H_INCLUDED

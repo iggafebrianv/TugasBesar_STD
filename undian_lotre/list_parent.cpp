@@ -10,9 +10,12 @@ void createList(List_parent &L)
 address_parent allocate(infotype_parent X)
 {
     address_parent P;
-    P = new elmlist_parent;
-    info(P) = X;
+    P = new elm_parent;
+    info(P).id = X.id;
+    info(P).nama= X.nama;
+    info(P).kontak = X.kontak;
     next(P) = NULL;
+    prev(P) = NULL;
     createList(child(P));
     return P;
 }
@@ -39,15 +42,14 @@ void insertFirst(List_parent &L, address_parent P)
         next(Q) = P;
         first(L) = P;
     }
-
 }
 
 void insertAfter(List_parent &L, address_parent Prec, address_parent P)
 {
-    prev(next(Prec)) = P;
     next(P) = next(Prec);
-    next(Prec) = P;
     prev(P) = Prec;
+    prev(next(Prec)) = P;
+    next(Prec) = P;
 }
 
 void insertLast(List_parent &L, address_parent P)
@@ -129,25 +131,44 @@ void deleteAfter(List_parent &L, address_parent Prec, address_parent &P)
 
 }
 
-address_parent findElm( List_parent L, infotype_parent X){
+address_parent findElm( List_parent L, string X){
     address_parent P;
-    P = first(L);
-    do {
-        if(info(P) == X) {
+    if (first(L) != NULL){
+        P = first(L);
+        do {
+            P = next(P);
+        } while(P != first(L) && info(P).nama != X);
+        if (P == first(L) && info(P).nama != X ){
+            return NULL;
+        }else {
             return P;
         }
-        P = next(P);
-    } while(P != first(L) || info(P) != X);
+    }
     return NULL;
 }
 
 void printInfo(List_parent L){
 address_parent P = first(L);
+    int i = 0;
     if(first(L)!=NULL) {
         do {
-            cout<<info(P)<<endl;
+            cout<<"Nama :"<<info(P).nama<<endl;
+            cout<<"Kontak : "<<info(P).kontak<<endl;
+            cout<<"ID : "<< info(P).id<<endl;
             printInfo(child(P));
             P = next(P);
+            i++;
         } while((P)!=first(L));
+    }
+}
+
+address_parent searchByID_p(List_parent L, string x ){
+    address_parent P;
+    P = first(L);
+    while (P != NULL && info(P).id == "x"){
+        if (info(P).id == "x"){
+            return P;
+        }
+        P = next(P);
     }
 }
