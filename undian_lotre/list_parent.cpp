@@ -1,6 +1,9 @@
 #include "list_parent.h"
 #include "list_child.h"
 using namespace std;
+/** Nama : Igga Febrian Virgiani
+    NIM  : 1301194283
+**/
 
 void createList(List_parent &L)
 {

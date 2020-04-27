@@ -7,6 +7,10 @@ using namespace std;
 #define first(L) L.first
 #define info(P) P->info
 
+/** Nama : Igga Febrian Virgiani
+    NIM  : 1301194283
+**/
+
 typedef struct elmlist_child*address_child;
 struct infotype_child{
     int lotre;

@@ -1,6 +1,10 @@
 #include "list_child.h"
 #include <iostream>
 
+/** Nama : Igga Febrian Virgiani
+    NIM  : 1301194283
+**/
+
 void createList(List_child &L){
     first(L) = NULL;
 }

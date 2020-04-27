@@ -24,7 +24,7 @@ struct elm_parent
     infotype_parent info;
     address_parent next;
     address_parent prev;
-    List_child child;
+    address_child child;
 };
 struct List_parent
 {
