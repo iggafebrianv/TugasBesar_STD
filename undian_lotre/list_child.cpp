@@ -1,4 +1,5 @@
 #include "list_child.h"
+#include "stdlib.h"
 #include <iostream>
 
 /** Nama : Igga Febrian Virgiani
@@ -98,7 +99,7 @@ void printInfo_Child(List_child L){
     cout<<endl;
 }
 
-/*int randomPemenang(){
+int randomPemenang(){
     int rndm = 100000 + rand() % 999999;
     return rndm;
-}*/
+}

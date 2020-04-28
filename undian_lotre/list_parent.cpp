@@ -19,7 +19,7 @@ address_parent allocate(infotype_parent X)
     info(P).kontak = X.kontak;
     next(P) = NULL;
     prev(P) = NULL;
-
+    createList(child(P));
     return P;
 }
 
@@ -158,7 +158,7 @@ address_parent P = first(L);
             cout<<"Nama :"<<info(P).nama<<endl;
             cout<<"Kontak : "<<info(P).kontak<<endl;
             cout<<"ID : "<< info(P).id<<endl;
-
+            printInfo_Child(child(P));
             P = next(P);
             i++;
         } while((P)!=first(L));

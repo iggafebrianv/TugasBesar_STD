@@ -1,26 +1,28 @@
 # depslib dependency file v1.0
-1588063469 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.cpp
+1588085337 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.cpp
 	"list_child.h"
+	"stdlib.h"
 	<iostream>
 
 1588062219 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.h
 	<iostream>
 
-1588062866 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
+1588085475 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
 	<iostream>
 	"list_parent.h"
 	"list_child.h"
 	"list_relasi.h"
+	"conio.h"
 
-1588062738 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.h
+1588079755 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.h
 	"list_child.h"
 	<iostream>
 
-1588062863 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.cpp
+1588081917 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.cpp
 	"list_parent.h"
 	"list_child.h"
 
-1588002867 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_relasi.h
+1588084863 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_relasi.h
 	"list_parent.h"
 	"list_relasi.h"
 

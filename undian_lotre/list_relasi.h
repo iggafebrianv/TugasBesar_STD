@@ -3,6 +3,7 @@
 #include "list_parent.h"
 #include "list_relasi.h"
 
+void deleteFirstParent(List_parent &L, address_parent &P);
 void printRelasi(address_parent pr, address_child ch);
 
 
