@@ -10,7 +10,7 @@ using namespace std;
 #define next(P) P->next
 #define prev(P) P->prev
 #define info(P) P->info
-#define child(P) P->child
+
 
 typedef struct elm_parent *address_parent;
 
@@ -24,7 +24,6 @@ struct elm_parent
     infotype_parent info;
     address_parent next;
     address_parent prev;
-    address_child child;
 };
 struct List_parent
 {

@@ -19,7 +19,7 @@ address_parent allocate(infotype_parent X)
     info(P).kontak = X.kontak;
     next(P) = NULL;
     prev(P) = NULL;
-    createList(child(P));
+
     return P;
 }
 
@@ -158,7 +158,7 @@ address_parent P = first(L);
             cout<<"Nama :"<<info(P).nama<<endl;
             cout<<"Kontak : "<<info(P).kontak<<endl;
             cout<<"ID : "<< info(P).id<<endl;
-            printInfo(child(P));
+
             P = next(P);
             i++;
         } while((P)!=first(L));
@@ -168,10 +168,10 @@ address_parent P = first(L);
 address_parent searchByID_p(List_parent L, string x ){
     address_parent P;
     P = first(L);
-    while (P != NULL && info(P).id == "x"){
-        if (info(P).id == "x"){
+    do {
+        if (info(P).id == x ){
             return P;
         }
         P = next(P);
-    }
+    }while (P != NULL && info(P).id == x);
 }

@@ -75,10 +75,10 @@ void deleteLast(List_child &L,address_child P){
 void deallocate_c(address_child &P){
     delete P;
 }
-address_child findElm_C(List_child &L,infotype_child X){
+address_child findElm_C(List_child &L,int X){
     address_child P = first(L);
     while (P != NULL){
-        If ( X == info(P).ID){
+        if (info(P).ID == X){
             return P;
         }
         P = next(P);
@@ -86,8 +86,7 @@ address_child findElm_C(List_child &L,infotype_child X){
     return NULL;
 }
 void printInfo_Child(List_child L){
-    address_child = first(L);
-    int i = 1;
+    address_child P = first(L);
     while (P != NULL){
         cout<<"----------------------------------------"<<endl;
         cout<< "No Undian Lotre : " << info(P).lotre << endl;
@@ -95,7 +94,11 @@ void printInfo_Child(List_child L){
         cout<< "ID Lotre : " << info(P).ID<< endl;
         cout<<"----------------------------------------"<<endl;
         P = next(P);
-        i++;
     }
     cout<<endl;
 }
+
+/*int randomPemenang(){
+    int rndm = 100000 + rand() % 999999;
+    return rndm;
+}*/

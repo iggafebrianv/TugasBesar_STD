@@ -8,7 +8,8 @@ void printRelasi(address_parent pr, address_child ch){
     address_child C;
 
     P = first(pr);
-    while ( P != first(pr)){
+
+    do {
         cout<< "Info Pemain : " << info(P)<<endl;
         cout << "no lotre yang dimiliki pemain : ";
         C = first(ch);
@@ -20,5 +21,5 @@ void printRelasi(address_parent pr, address_child ch){
         }
         cout<<endl;
         P = next(P);
-    }
+    }while ( P != first(pr));
 }

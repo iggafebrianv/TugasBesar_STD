@@ -36,8 +36,8 @@ void deleteAfter(List_child &L,address_child P, address_child Prec);
 void deleteLast(List_child &L,address_child P);
 void deallocate_c(address_child &P);
 address_child findElm_C(List_child &L,infotype_child X);
-void printInfo_Child(List_child L);//
-
+void printInfo_Child(List_child L);
+int randomPemenang();
 
 
 #endif // LIST_CHILD_H_INCLUDED
