@@ -7,12 +7,14 @@
 1588062219 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.h
 	<iostream>
 
-1588085475 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
+1588168920 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
 	<iostream>
 	"list_parent.h"
 	"list_child.h"
 	"list_relasi.h"
-	"conio.h"
+	<stdlib.h>
+	<iomanip>
+	<conio.h>
 
 1588079755 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_parent.h
 	"list_child.h"

@@ -12,16 +12,13 @@ void deleteFirstParent(List_parent &L, address_parent &P){
     }while(first(child(P)) != first(L));
     deleteFirst(L,P);
 }
-void printRelasi(address_parent pr, address_child ch){
-    address_parent P;
-    address_child C;
-
-    P = first(pr);
+void printRelasi(address_parent P, address_child C){
+    P = first(L);
 
     do {
         cout<< "Info Pemain : " << info(P)<<endl;
         cout << "no lotre yang dimiliki pemain : ";
-        C = first(ch);
+        C = first(P);
         while (C != NULL){
             if (child(P) == C){
                 cout<<info(ch)<<", ";
@@ -30,5 +27,5 @@ void printRelasi(address_parent pr, address_child ch){
         }
         cout<<endl;
         P = next(P);
-    }while ( P != first(pr));
+    }while ( P != first(L));
 }
