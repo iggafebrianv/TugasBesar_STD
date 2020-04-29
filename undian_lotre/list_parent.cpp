@@ -1,14 +1,11 @@
 #include "list_parent.h"
 #include "list_child.h"
 using namespace std;
-/** Nama : Igga Febrian Virgiani
-    NIM  : 1301194283
-**/
 
 void createList(List_parent &L)
 {
     first(L) = NULL;
-}
+}///igga Febrian Virgiani (1301194283)
 
 address_parent allocate(infotype_parent X)
 {
@@ -21,12 +18,12 @@ address_parent allocate(infotype_parent X)
     prev(P) = NULL;
     createList(child(P));
     return P;
-}
+}///igga Febrian Virgiani (1301194283)
 
 void deallocate(address_parent &P)
 {
     delete P;
-}
+}///igga Febrian Virgiani (1301194283)
 
 void insertFirst(List_parent &L, address_parent P)
 {
@@ -45,7 +42,7 @@ void insertFirst(List_parent &L, address_parent P)
         next(Q) = P;
         first(L) = P;
     }
-}
+}///igga Febrian Virgiani (1301194283)
 
 void insertAfter(List_parent &L, address_parent Prec, address_parent P)
 {
@@ -53,7 +50,7 @@ void insertAfter(List_parent &L, address_parent Prec, address_parent P)
     prev(P) = Prec;
     prev(next(Prec)) = P;
     next(Prec) = P;
-}
+}///igga Febrian Virgiani (1301194283)
 
 void insertLast(List_parent &L, address_parent P)
 {
@@ -71,7 +68,7 @@ void insertLast(List_parent &L, address_parent P)
         prev(P) = Q;
         next(Q) = P;
     }
-}
+}///igga Febrian Virgiani (1301194283)
 
 void deleteFirst(List_parent &L, address_parent &P)
 {
@@ -92,7 +89,7 @@ void deleteFirst(List_parent &L, address_parent &P)
         next(Q) = next(P);
         next(P) = NULL;
     }
-}
+}///igga Febrian Virgiani (1301194283)
 
 void deleteLast(List_parent &L, address_parent &P)
 {

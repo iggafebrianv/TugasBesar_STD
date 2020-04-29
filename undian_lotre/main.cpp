@@ -11,14 +11,15 @@ using namespace std;
 **/
 int main()
 {
-    bool cek;
+    bool found;
     List_parent LP;
     List_child LC;
     infotype_parent P;
     infotype_child N;
     createList(LP);
     createList(LC);
-    int menu, r, s, x, total = 0;
+    string q;
+    int menu, s, x, total = 0;
   do{
     system("CLS");
     cout<<"*=====================================================*"<<endl;
@@ -27,7 +28,7 @@ int main()
     cout<<"* 1. Membuat data Pembeli undian lotre                *"<<endl;
     cout<<"* 2. Menampilkan semua data pembeli                   *"<<endl;
     cout<<"* 3. Membuat data tiket lotre yang terjual            *"<<endl;
-    cout<<"* 4. Membuat data pembeli beserta lotre yg dibelinya  *"<<endl;
+    cout<<"* 4. Menampilkan data pembeli beserta lotrenya        *"<<endl;
     cout<<"* 5. Mencari data pembeli berdasarkan ID pembeli      *"<<endl;
     cout<<"* 6. Mencari data tiket lotre berdasarkan ID pembeli  *"<<endl;
     cout<<"* 7. Menghapus data tiket lotre milik pembeli         *"<<endl;
@@ -41,7 +42,8 @@ int main()
             system("CLS");
             cout<<"*=============INPUT DATA PEMBELI=============*"<<endl;
             cout<<"* Nama       : ";
-            cin>>P.nama;
+            cin.get();
+            getline(cin,P.nama);
             cout<<"* Kontak     : ";
             cin>>P.kontak;
             cout<<"* ID Pembeli : ";
@@ -52,22 +54,34 @@ int main()
                 address_parent Q = first(LP);
                 do{
                    if (info(Q).id == P.id){
-                    cek = true;
+                    found = true;
                    }
                    Q = next(Q);
                 }while (Q != first(LP) );
-                if (!cek){
+                if (!found){
                     insertLast(LP,allocate(P));
                 }else {
-                    cout << "ID telah terdaftar" << endl;
+                    cout << "ID Pembeli telah terdaftar" << endl;
                 }
             }
-            cout<<"tekan enter untuk melanjutkan...";
+            cout<<"Press Enter to Continue...";
             getch();
                 break;
-                }
+        }
+        case 2:{
+            system("CLS");
+            cout<<"*============DATA PEMBELI==============*"<<endl;
+            printInfo(LP);
+            cout<<"Press Enter to Continue";
+                getch();
+        }
+            break;
 
-            }
+
+
+
+
+    }
 
 
     }while (menu != 0);
