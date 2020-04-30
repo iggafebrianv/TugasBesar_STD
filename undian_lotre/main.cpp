@@ -174,7 +174,8 @@ int main()
           while ( K != NULL && info(K).ID != s){
             deleteFirst(LC,K);
           }
-
+          cout<<"Press Enter to Continue...";
+          getch();
       }
       break;
 
@@ -184,9 +185,11 @@ int main()
         cout<<"*=============Menghapus Data Pembeli===================*"<<endl;
         cout<<"Masukan ID Pembeli :  ";
         cin>>q;
-        findElm(LP,q)
+        findElm(LP,q);
         address_parent M;
         deleteFirstParent(LP,M);
+        cout<<"Press Enter to Continue...";
+        getch();
       }
       break;
 
@@ -197,6 +200,7 @@ int main()
         cout<<"Pemenangnya adalah: ";
         cout<<s;
         s = randomPemenang();
+        cout<<"Press Enter to Continue...";
         getch();
       }
       break;
@@ -204,11 +208,7 @@ int main()
 
     }
 
-
-
-
-
-    }while (menu != 0);
+}while (menu != 0);
 
     return 0;
 }
