@@ -11,7 +11,7 @@ using namespace std;
 **/
 int main()
 {
-    bool found;
+    bool found, terdaftar;
     List_parent LP;
     List_child LC;
     infotype_parent P;
@@ -50,24 +50,30 @@ int main()
             cin>>P.id;
             if(first(LP) == NULL){
                 insertFirst(LP,allocate(P));
+                terdaftar = true;
             }else {
                 address_parent Q = first(LP);
                 do{
                    if (info(Q).id == P.id){
+                    cout<<"Maaf ID Pembeli telah terdaftar silahkan input kembali "<<endl;
                     found = true;
+                    cout<<"* ID Pembeli : ";
+                    cin>>P.id;
+                   }else if (!found) {
+                      insertLast(LP,allocate(P));
+                      terdaftar = true;
                    }
                    Q = next(Q);
                 }while (Q != first(LP) );
-                if (!found){
-                    insertLast(LP,allocate(P));
-                }else {
-                    cout << "ID Pembeli telah terdaftar" << endl;
-                }
+            if (terdaftar){
+                cout << "ID Pembeli telah terdaftar" << endl;
             }
-            cout<<"Press Enter to Continue...";
+                }
+             cout<<"Press Enter to Continue...";
             getch();
                 break;
-        }
+            }
+
         case 2:{
             system("CLS");
             cout<<"*============DATA PEMBELI==============*"<<endl;
@@ -78,27 +84,29 @@ int main()
             break;
 
         case 3:{
+        ///Jadi findelementIDparent > inputan user ID  > findelement IDchild> klw gak kembar> alokasi child ///
            system("CLS");
            cout<<"*============INPUT DATA LOTRE=============*"<<endl;
-           cout<<"* Angka Lotre :                           *"<<endl;
-           cin>>N.lotre;
-           cout<<"* Tanggal Pembelian :                     *"<<endl;
-           cin>>N.tanggal;
-           cout<<"* ID Lotre :                              *"<<endl;
-           cin>>N.ID;
-           if (first(LC) == NULL){
-            insertFirst(LC,allocate_c(N));
+           cout<<"* Silahkan Masukan ID Pembeli :           ";
+           string P;
+           cin>>P;
+           if (findElm(LP,P) != NULL){
+                cout<<"ID Pembeli Telah Ditemukan selanjutnya silahkan input data lotre"<<endl;
+                cout<<"* Angka Lotre :     ";
+                cin>>N.lotre;
+                cout<<"* Tanggal Pembelian :      ";
+                cin>>N.tanggal;
+                cout<<"* ID Lotre :       ";
+                cin>>N.ID;
+                if (findElm_C(LC,N.ID) != NULL ){
+                    cout<<"Maaf ID Lotre telah digunakan, silahkan input kembali: ";
+                    cout<<"* ID Lotre :       ";
+                    cin>>N.ID;
+                }else{
+                    insertFirst(LC, allocate_c(N));
+                }
            }else {
-                address_child Q = first(LC);
-                while(Q != NULL){
-                    if (info(Q).ID == N.ID){
-                        found = true;
-                    }
-                    Q = next(Q);
-                }
-                if (!found){
-                    insertLast(LC,allocate_c(N));
-                }
+            cout<<"Maaf ID Pembeli tidak ditemukan, proses input data lotre tidak bisa dilakukan"<<endl;
            }
            cout<<"Please Enter to Continue..."<<endl;
            getch();
