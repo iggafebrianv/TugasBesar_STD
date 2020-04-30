@@ -40,6 +40,7 @@ int main()
     switch(menu){
         case 1:{
             system("CLS");
+            /// Igga Febrian Virgiani (1301194283)///
             cout<<"*=============INPUT DATA PEMBELI=============*"<<endl;
             cout<<"* Nama       : ";
             cin.get();
@@ -76,6 +77,7 @@ int main()
 
         case 2:{
             system("CLS");
+            ///Igga Febrian Virgiani (1301194283)///
             cout<<"*============DATA PEMBELI==============*"<<endl;
             printInfo(LP);
             cout<<"Press Enter to Continue";
@@ -84,7 +86,7 @@ int main()
             break;
 
         case 3:{
-        ///Jadi findelementIDparent > inputan user ID  > findelement IDchild> klw gak kembar> alokasi child ///
+        ///Igga Febrian Virgiani (1301194283) ///
            system("CLS");
            cout<<"*============INPUT DATA LOTRE=============*"<<endl;
            cout<<"* Silahkan Masukan ID Pembeli :           ";
