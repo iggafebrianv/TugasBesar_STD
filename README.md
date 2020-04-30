@@ -7,4 +7,4 @@ Nama : Naufal Yozha Revansyah(1301194282)
 
 Undian Lotre
 Parent : Pembeli
-Child  : No Lotre
+Child  : Tiket Lotre
