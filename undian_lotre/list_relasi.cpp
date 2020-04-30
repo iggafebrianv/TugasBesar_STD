@@ -11,7 +11,8 @@ void deleteFirstParent(List_parent &L, address_parent &P){
         delete C;
     }while(first(child(P)) != first(L));
     deleteFirst(L,P);
-}
+} ///igga Febrian Virgiani (1301194283)///
+
 void printRelasi(address_parent P, address_child C){
     P = first(L);
 
@@ -28,4 +29,4 @@ void printRelasi(address_parent P, address_child C){
         cout<<endl;
         P = next(P);
     }while ( P != first(L));
-}
+} ///igga Febrian Virgiani (1301194283)///

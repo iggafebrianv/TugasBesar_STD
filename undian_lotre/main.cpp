@@ -72,8 +72,8 @@ int main()
                 }
              cout<<"Press Enter to Continue...";
             getch();
-                break;
-            }
+        }
+        break;
 
         case 2:{
             system("CLS");
@@ -83,10 +83,10 @@ int main()
             cout<<"Press Enter to Continue";
                 getch();
         }
-            break;
+        break;
 
         case 3:{
-        ///Igga Febrian Virgiani (1301194283) ///
+        ///Igga Febrian Virgiani (1301194283)///
            system("CLS");
            cout<<"*============INPUT DATA LOTRE=============*"<<endl;
            cout<<"* Silahkan Masukan ID Pembeli :           ";
@@ -100,7 +100,7 @@ int main()
                 cin>>N.tanggal;
                 cout<<"* ID Lotre :       ";
                 cin>>N.ID;
-                if (findElm_C(LC,N.ID) != NULL ){
+                if (findElm_C(LC,N) != NULL ){
                     cout<<"Maaf ID Lotre telah digunakan, silahkan input kembali: ";
                     cout<<"* ID Lotre :       ";
                     cin>>N.ID;
@@ -112,12 +112,13 @@ int main()
            }
            cout<<"Please Enter to Continue..."<<endl;
            getch();
-            break;
-           }
+        }
+        break;
 
 
       case 4:{
         system("CLS");
+        ///Igga Febrian Virgiani (1301194283)///
             cout<<"*============DATA PEMBELI==============*"<<endl;
             address_parent D;
             address_child E;
@@ -126,32 +127,88 @@ int main()
                 getch();
       }
       break;
+
       case 5:{
-          cout<<"* Masukan ID Parent :                   *"<<endl;
+          system("CLS");
+          ///Igga Febrian Virgiani (1301194283)///
+          cout<<"*===========Mencari Pembeli berdasarkan ID===============*"<<endl;
+          cout<<"* Masukan ID Parent :                   ";
           cin.get();
           getline(cin,q);
-          findElm(LP,q);
+          address_parent P;
+          if ( P == NULL){
+            cout<<"ID Pembeli"<<q<<"tidak ditemukan"<<endl;
+          }else {
+            findElm(LP,q);
+          }
           cout<<"Press Enter to Continue...";
           getch();
       }
       break;
 
       case 6:{
+          system("CLS");
+          ///Igga Febrian Virgiani (1301194283)///
+          cout<<"*===========Mencari Lotre berdasarkan ID============*"<<endl;
+          cout<<"* Masukan ID Lotre :       ";
+          cin>>x;
+          address_child P = first(LC);
+          if ( P == NULL){
+            cout<<"Maaf ID Lotre Tidak Ditemukan"<<endl;
+          }else{
+              findElm_C(LC,x);
+          }
+          cout<<"Press Enter to Continue...";
+          getch();
+      }
+      break;
 
+      case 7:{
+          system("CLS");
+          ///Igga Febrian Virgiani (1301194283)///
+          cout<<"*===========Menghapus Data Lotre====================*"<<endl;
+          cout<<"Masukan ID Lotre : ";
+          cin>>s;
+          findElm_C(LC,s);
+          address_child K = first(LC);
+          while ( K != NULL && info(K).ID != s){
+            deleteFirst(LC,K);
+          }
 
       }
+      break;
 
+      case 8: {
+          system("CLS");
+          ///Igga Febrian Virgiani (1301194283)///
+        cout<<"*=============Menghapus Data Pembeli===================*"<<endl;
+        cout<<"Masukan ID Pembeli :  ";
+        cin>>q;
+        findElm(LP,q)
+        address_parent M;
+        deleteFirstParent(LP,M);
+      }
+      break;
 
+      case 9:{
+          system("CLS");
+          ///Igga Febrian Virgiani (1301194283)///
+        cout<<"*==============Pengumuman Pemenang===================*"<<endl;
+        cout<<"Pemenangnya adalah: ";
+        cout<<s;
+        s = randomPemenang();
+        getch();
+      }
+      break;
 
 
     }
 
 
+
+
+
     }while (menu != 0);
-
-
-
-
 
     return 0;
 }

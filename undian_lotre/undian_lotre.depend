@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588220624 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.cpp
+1588248999 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.cpp
 	"list_child.h"
 	"stdlib.h"
 	<iostream>
@@ -7,7 +7,7 @@
 1588062219 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_child.h
 	<iostream>
 
-1588168920 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
+1588257611 source:c:\users\user\documents\github\tugasbesar_std\undian_lotre\main.cpp
 	<iostream>
 	"list_parent.h"
 	"list_child.h"
@@ -24,7 +24,7 @@
 	"list_parent.h"
 	"list_child.h"
 
-1588084863 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_relasi.h
+1588248932 c:\users\user\documents\github\tugasbesar_std\undian_lotre\list_relasi.h
 	"list_parent.h"
 	"list_relasi.h"
 
