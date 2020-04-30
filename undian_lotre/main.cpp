@@ -173,6 +173,7 @@ int main()
           address_child K = first(LC);
           while ( K != NULL && info(K).ID != s){
             deleteFirst(LC,K);
+            deallocate_c(K);
           }
           cout<<"Press Enter to Continue...";
           getch();
@@ -188,6 +189,7 @@ int main()
         findElm(LP,q);
         address_parent M;
         deleteFirstParent(LP,M);
+        deallocate(M);
         cout<<"Press Enter to Continue...";
         getch();
       }
