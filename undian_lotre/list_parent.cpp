@@ -109,7 +109,7 @@ void deleteLast(List_parent &L, address_parent &P)
         next(Q) = next(P);
         next(P) = NULL;
     }
-}
+}///igga Febrian Virgiani (1301194283)
 
 void deleteAfter(List_parent &L, address_parent Prec, address_parent &P)
 {
@@ -129,27 +129,23 @@ void deleteAfter(List_parent &L, address_parent Prec, address_parent &P)
         prev(P) = NULL;
     }
 
-}
+}///igga Febrian Virgiani (1301194283)
 
 address_parent findElm( List_parent L, string X){
     address_parent P;
     if (first(L) != NULL){
         P = first(L);
         do {
+            if (info(P).id == X){
+                return P;
+            }
             P = next(P);
-        } while(P != first(L) && info(P).nama != X);
-        if (P == first(L) && info(P).nama != X ){
-            return NULL;
-        }else {
-            return P;
-        }
+        } while(P != first(L) && info(P).id != X);
     }
-    return NULL;
-}
+}///igga Febrian Virgiani (1301194283)
 
 void printInfo(List_parent L){
 address_parent P = first(L);
-    int i = 0;
     if(first(L)!=NULL) {
         do {
             cout<<"Nama :"<<info(P).nama<<endl;
@@ -157,10 +153,9 @@ address_parent P = first(L);
             cout<<"ID : "<< info(P).id<<endl;
             printInfo_Child(child(P));
             P = next(P);
-            i++;
         } while((P)!=first(L));
     }
-}
+}///igga Febrian Virgiani (1301194283)
 
 address_parent searchByID_p(List_parent L, string x ){
     address_parent P;
@@ -171,4 +166,4 @@ address_parent searchByID_p(List_parent L, string x ){
         }
         P = next(P);
     }while (P != NULL && info(P).id == x);
-}
+}///igga Febrian Virgiani (1301194283)

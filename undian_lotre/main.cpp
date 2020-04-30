@@ -30,7 +30,7 @@ int main()
     cout<<"* 3. Membuat data tiket lotre yang terjual            *"<<endl;
     cout<<"* 4. Menampilkan data pembeli beserta lotrenya        *"<<endl;
     cout<<"* 5. Mencari data pembeli berdasarkan ID pembeli      *"<<endl;
-    cout<<"* 6. Mencari data tiket lotre berdasarkan ID pembeli  *"<<endl;
+    cout<<"* 6. Mencari data tiket lotre berdasarkan ID          *"<<endl;
     cout<<"* 7. Menghapus data tiket lotre milik pembeli         *"<<endl;
     cout<<"* 8. Menghapus data pembeli                           *"<<endl;
     cout<<"* 9. Menampilkan nomor lotre pemenang                 *"<<endl;
@@ -77,6 +77,59 @@ int main()
         }
             break;
 
+        case 3:{
+           system("CLS");
+           cout<<"*============INPUT DATA LOTRE=============*"<<endl;
+           cout<<"* Angka Lotre :                           *"<<endl;
+           cin>>N.lotre;
+           cout<<"* Tanggal Pembelian :                     *"<<endl;
+           cin>>N.tanggal;
+           cout<<"* ID Lotre :                              *"<<endl;
+           cin>>N.ID;
+           if (first(LC) == NULL){
+            insertFirst(LC,allocate_c(N));
+           }else {
+                address_child Q = first(LC);
+                while(Q != NULL){
+                    if (info(Q).ID == N.ID){
+                        found = true;
+                    }
+                    Q = next(Q);
+                }
+                if (!found){
+                    insertLast(LC,allocate_c(N));
+                }
+           }
+           cout<<"Please Enter to Continue..."<<endl;
+           getch();
+            break;
+           }
+
+
+      case 4:{
+        system("CLS");
+            cout<<"*============DATA PEMBELI==============*"<<endl;
+            address_parent D;
+            address_child E;
+            printRelasi(D,E);
+            cout<<"Press Enter to Continue";
+                getch();
+      }
+      break;
+      case 5:{
+          cout<<"* Masukan ID Parent :                   *"<<endl;
+          cin.get();
+          getline(cin,q);
+          findElm(LP,q);
+          cout<<"Press Enter to Continue...";
+          getch();
+      }
+      break;
+
+      case 6:{
+
+
+      }
 
 
 
